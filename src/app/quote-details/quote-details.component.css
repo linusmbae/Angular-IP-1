@@ -3,3 +3,17 @@ button
   float: right;
   border-radius: 20px;
 }
+#tUp
+{
+  margin-left: 15px;
+  font-size:28px;
+  color:orange;
+  cursor: progress;
+}
+#tDown
+{
+  margin-left: 10px;
+  font-size:28px;
+  color:orange;
+  cursor: progress;
+}
