@@ -1,6 +1,5 @@
 button
 {
-  
-  width: 40%;
+  float: right;
   border-radius: 20px;
 }
