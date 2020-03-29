@@ -16,7 +16,7 @@
           <hr>
           <div *ngFor='let quote of quotes ; let i = index'>
               <div>
-                <h2 id="{{i}}">Author: {{quote.authorName}}<i id="down" (click)='toggleDetails(i)'></i></h2>
+                <h2 id="{{i}}"><strong>Author:</strong> {{quote.authorName}}<i id="down" (click)='toggleDetails(i)'></i></h2>
 
               </div>
               <div *ngIf='quote.showQuoteDetails'>
