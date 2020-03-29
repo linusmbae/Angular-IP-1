@@ -17,7 +17,7 @@
           <div *ngFor='let quote of quotes ; let i = index'>
               <div>
                 <h2 id="{{i}}"><strong>Author:</strong> {{quote.authorName}}<i id="down" (click)='toggleDetails(i)'></i></h2>
-
+                <hr>
               </div>
               <div *ngIf='quote.showQuoteDetails'>
                 <app-quote-details [quote]='quote' (isComplete) = 'removeQuote($event,i)'></app-quote-details>

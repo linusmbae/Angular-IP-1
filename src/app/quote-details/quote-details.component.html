@@ -1,6 +1,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<p>This Quote was created <strong>{{quote.compDate|countDate}}</strong> ago</p>
+<p>This Quote was created <strong>{{quote.compDate|countDate}}</strong> days ago</p>
 <strong>Quote:</strong> {{quote.quote}}
 <i class="fa fa-thumbs-up" id="tUp"></i>
 <i class="fa fa-thumbs-down" id="tDown"></i>
 <button class="btn btn-danger" (click)='removeQuote(true)'>Remove Quote</button>
+<br>
+<hr>
+<h4><strong>Votes</strong> </h4>
+<div class="row">
+  <div class="col-md-1">
+    <i class="fa fa-thumbs-up"></i>
+    {{quote.upVotes}}
+  </div>
+  <div class="col-md-1">
+    <i class="fa fa-thumbs-down"></i>
+    {{quote.downVotes}}
+  </div>
+</div>
