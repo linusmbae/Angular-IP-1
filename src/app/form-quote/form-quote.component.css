@@ -1,0 +1,24 @@
+.row h2
+{
+  text-align: center;
+}
+::placeholder
+{
+  text-align: center;
+}
+input
+{
+  text-align: center;
+}
+#save
+{
+  float: right;
+  width: 40%;
+  border-radius: 20px;
+}
+#reset
+{
+  float: left;
+  width: 40%;
+  border-radius: 20px;
+}
