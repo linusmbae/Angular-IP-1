@@ -1,15 +1,34 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="container">
   <div class="container-fluid">
-    <div class="card-header">
+    <div class="card-header" id="head">
       <h3> <strong>Quote App</strong> </h3>
     </div>
     <div class="jumbotron">
       <div class="row">
-        <app-form-quote></app-form-quote>
+        <div class="col-md-5">
+          <h2>New Quote</h2>
+          <hr>
+          <app-form-quote></app-form-quote>
+        </div>
+        <div class="col-md-7">
+          <h2>My Saved Quotes</h2>
+          <hr>
+          <div *ngFor='let quote of quotes ; let i = index'>
+              <div>
+                <h2>Author: {{quote.authorName}}<i id="down" (click)='toggleDetails(i)'></i></h2>
+
+              </div>
+              <div *ngIf='quote.showQuoteDetails'>
+                <app-quote-details [quote]='quote'></app-quote-details>
+              </div>
+          </div>
+
+        </div>
       </div>
-      <div class="row">
-        <app-quote-details></app-quote-details>
-      </div>
+    </div>
+    <div class="card-footer" id="foot">
+      &copy; 2020
     </div>
   </div>
 </div>
