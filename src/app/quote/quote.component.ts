@@ -7,7 +7,7 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[]=[
-    new Quote("linus","lucy","this is my quote", new Date (2020,2,24),0,0)
+    new Quote("Arthur C. Clarke","linus","Any sufficiently advanced technology is indistinguishable from magic.", new Date (2020,2,24))
   ]
   toggleDetails(index)
    {
