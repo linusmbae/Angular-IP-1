@@ -9,7 +9,7 @@
         <div class="col-md-5">
           <h2>New Quote</h2>
           <hr>
-          <app-form-quote></app-form-quote>
+          <app-form-quote (addQuote)='addNewQuote($event)'></app-form-quote>
         </div>
         <div class="col-md-7">
           <h2>My Saved Quotes</h2>

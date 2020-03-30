@@ -7,19 +7,27 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[]=[
-    new Quote("linus","lucy","this is my quote", new Date (2020,2,24),[0],[0])
+    new Quote("linus","lucy","this is my quote", new Date (2020,2,24),0,0)
   ]
   toggleDetails(index)
    {
     this.quotes[index].showQuoteDetails = !this.quotes[index].showQuoteDetails;
    }
-   removeQuote(isComplete, index){
-    if (isComplete) {
+   removeQuote(isComplete, index)
+   {
+    if (isComplete)
+    {
         let toDelete=confirm(`Are you sure you want to delete ${this.quotes[index].authorName}?`)
-        if (toDelete){
-      this.quotes.splice(index,1)
+        if (toDelete)
+        {
+          this.quotes.splice(index,1)
+        }
     }
-    }
+  }
+  addNewQuote(quote)
+  {
+    quote.compDate=new Date(quote.compDate)
+    this.quotes.unshift(quote)
   }
   constructor() { }
 
