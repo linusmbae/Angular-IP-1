@@ -10,9 +10,11 @@ votess: Votes[]=[
   new Votes(0,0)
 ]
 @Output()upComplete=new EventEmitter<boolean>();
-addUpVote(addUp:boolean)
+addUpVote(addUp)
 {
-  this.upComplete.emit(addUp);
+  let qLength=this.votess.length;
+  addUp.upVotes=qLength+1;
+  this.votess.push(addUp)
 }
 @Output()downComplete=new EventEmitter<boolean>();
 addUpVote(addDown:boolean)
