@@ -6,13 +6,13 @@ import { Quote } from "../quote";
   styleUrls: ['./form-quote.component.css']
 })
 export class FormQuoteComponent implements OnInit {
-newQuote=new Quote("","","",new Date());
+newQuote=new Quote("","","",new Date(),0,0);
 @Output() addQuote=new EventEmitter<Quote>();
 
 submitQuote()
 {
   this.addQuote.emit(this.newQuote);
-  this.newQuote=new Quote("","","",new Date())
+  this.newQuote=new Quote("","","",new Date(),0,0)
 }
   constructor() { }
 
